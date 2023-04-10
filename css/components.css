@@ -1,5 +1,4 @@
-
- /*=== COMPONENTS ===*/
+/*=== COMPONENTS ===*/
  
  /* HEADER */
  
@@ -15,241 +14,276 @@
   padding-top: 28rem;
   text-shadow: .2rem .2rem .125rem #38595e;
 }
+
+ 
+ /* MENU */
+ 
+ .menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+ }
+ 
+ .btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: min(14vh,1rem);
+   width: max(1rem,15vw);
+   text-decoration: none;
+   color: white;
+   background-color: #4a6867;
+   border-radius:    1.5rem;
+   font-size: max(1rem,.5vw);
+   line-height: 1.1rem;
+ }
+ 
+  .btn:hover {
+   background-color: #2e4443;
+   transition:       background-color .4s ease-in-out;
+ }
+ 
+
+ /* MAIN */
+ 
+ .main {
+  background: hsla(184,5%,62%,.1);
+  padding: max(.5rem,2vw);
+  font-weight:     400;
+  font-family:    'Ubuntu', sans-serif;
+  text-decoration: none;
+ }
+ 
+ 
+   img:hover {
+     transform: scale(1.03);
+     transition: all 0.7s ease-in-out;
+   }  
+ 
+
+
+
+ /* PROGRAM */
+ 
+
+ .section-left, .section-right {
+  max-height: 9rem;
+  padding: max(1rem,1vw);
+  margin: 0 0 1rem 0; /* ez itt kell? */
+  display: flex;
+  align-items: center;
+}
+
+.program-image-right {
+  margin-right: 1rem;
+  padding-left: 6rem;
+}
+
+.program-text-left {
+  font-size: 1.15rem;
+  flex: 1;
+  padding-right: 7rem;
+  font-size: max(1rem, 1.1vw);
+}
+
+.program-image-left {
+  margin-left: 1rem;
+  padding-right: 6rem;
+  order: 1;
+}
+
+.program-text-right {
+  font-size: 1.15rem;
+  flex: 2;
+  padding-left: 7rem;
+  font-size: max(1rem, 1.1vw);
+}
+
+
+
+ 
+ /* SZTORI */
+ 
+ 
+ .type {
+   font-weight: 500;
+   font-size: .85rem;
+   line-height: 1.75rem;
+ }
+ 
+ .felso {
+   font-size: 3.5rem;
+   font-family: 'Lily Script One', cursive;
+   opacity: 0.65;
+ }
+ 
+ .also {
+   font-size: 3.5rem;
+   font-family: 'Lily Script One', cursive;
+   padding-top: 2rem;
+   text-align: right;
+   opacity: 0.65;
+ }
+ 
   
-  @media (max-width: 768px) {  
-    .header-text {
-      font-size: 3rem;
-      text-align: center;
-      padding-top: 14rem;
+
+ 
+ /* JATEK */
+ .card {
+  height: min(20rem,35vh);
+  width: max(8rem, 12vw);
+  margin: min(.25rem,.65vh);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer; /* rámutató egér */
+  position: relative;
+  font-family: ubuntu;
+  font-size: max(.85rem, 1.25vw);
+}
+
+ .scene {
+   perspective: 60rem; /* amilyen ívben fordul a kártya */
+ }
+ 
+ .card.is-flipped {
+   transform: rotateY(180deg);
+ }
+ 
+ .card__face {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   color: white;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   padding: 1rem;
+   text-align: center;
+ }
+ 
+ .card__face--front {
+   background: #28605e;
+ }
+ 
+ .card__face--back {
+   background: #14455e;
+   transform: rotateY(180deg);
+ }
+   
+ .card__face {
+   display: flex;
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+ }  
+
+
+ /* FOOTER */
+ .footer {
+   background: #314a55;
+   font-family: 'Josefin Sans', sans-serif;
+   color: #edeee3;
+   min-height: 2.5rem;
+   text-align: center;
+   font-size: max(.9rem, .75vw);
+   line-height: max(1.5rem, 3vh);
+ }
+ 
+ .strong {
+   font-weight: 700;
+   color: #eeefe5;
+   font-size: max(1.025rem, 1vw);
+ }
+ 
+ .strong:hover {
+   color: #afccd3;
+   transition: color .4s ease-in-out;
+ }
+
+
+/* MODIFIERS */
+@media (max-width: 768px) {  
+
+
+.header {
+      background: url('https://i.imgur.com/MBBRjHc.jpg') no-repeat center;
+      background-size: cover;
     }
+
+.header-text {
+  font-size: 4.5rem;
+  text-align: center;
   }
-   
-   /* MENU */
-   
-   .menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  .btn {
-    display: flex;
-    align-items: center;
-  }
-  
-   .menu {
-     font-family: 'Josefin Sans', sans-serif;
-     font-weight: 500;
-     text-decoration: none;
+
+
+.menu {
+  display: grid;
+  flex-direction: row;
+  width: 20%;
+  padding-bottom: 3rem;
+}
+
+.btn {
+  width: .5vw;
+}
+
+
+.jatek {
+     margin: .05rem;
    }
-   
-   .btn {
-     text-decoration: none;
-     color: white;
-     background-color: #4a6867;
-     border-radius:    1.5rem;
-   }
-   
-    .btn:hover {
-     background-color: #2e4443;
-     transition:       background-color .4s ease-in-out;
-   }
-   
-   @media (max-width: 768px) {
-     .btn {
-       height: 14vh;
-       padding: 1rem;
-       font-size: .7rem;
-       text-align: center;
-     }
-   }
-   
-  
-  
-  
-   /* MAIN */
-   
-   .main {
-    background: hsla(184,5%,62%,.1);
-    padding: max(.5rem,2vw);
-    font-weight:     400;
-    font-family:    'Ubuntu', sans-serif;
-    text-decoration: none;
-   }
-   
-   
-     img:hover {
-       transform: scale(1.03);
-       transition: all 0.7s ease-in-out;
-     }  
-   
-  
-  
-  
-   /* PROGRAM */
-   
-  
-   .section-left, .section-right {
-    max-height: 9rem;
-    padding: max(1rem,1vw);
-    margin: 0 0 1rem 0; /* ez itt kell? */
-    display: flex;
-    align-items: center;
-  }
-  
-  .program-image-right {
-    margin-right: 1rem;
-    padding-left: 6rem;
-  }
-  
-  .program-text-left {
-    font-size: 1.15rem;
-    flex: 1;
-    padding-right: 7rem;
-    font-size: max(1rem, 1.1vw);
-  }
-  
-  .program-image-left {
-    margin-left: 1rem;
-    padding-right: 6rem;
-    order: 1;
-  }
-  
-  .program-text-right {
-    font-size: 1.15rem;
-    flex: 2;
-    padding-left: 7rem;
-    font-size: max(1rem, 1.1vw);
-  }
-  
-  
-  
-   
-   /* SZTORI */
-   
-   
-   .type {
-     font-weight: 500;
-     font-size: .85rem;
-     line-height: 1.75rem;
-   }
-   
-   .felso {
-     font-size: 3.5rem;
-     font-family: 'Lily Script One', cursive;
-     opacity: 0.65;
-   }
-   
-   .also {
-     font-size: 3.5rem;
-     font-family: 'Lily Script One', cursive;
-     padding-top: 2rem;
-     text-align: right;
-     opacity: 0.65;
-   }
-   
-    
-  
-   
-   /* JATEK */
+
    .card {
-    height: min(20rem,35vh);
-    width: max(8rem, 12vw);
-    margin: min(.25rem,.65vh);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer; /* rámutató egér */
-    position: relative;
-    font-family: ubuntu;
-    font-size: max(.85rem, 1.25vw);
-  }
-  
-   .scene {
-     perspective: 60rem; /* amilyen ívben fordul a kártya */
+     flex: 0 1 15%;
+     height: 24vh;
+     line-height: 1.3rem;
    }
-   
-   .card.is-flipped {
-     transform: rotateY(180deg);
-   }
-   
-   .card__face {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     color: white;
-     -webkit-backface-visibility: hidden;
-     backface-visibility: hidden;
-     padding: 1rem;
-     text-align: center;
-   }
-   
-   .card__face--front {
-     background: #28605e;
-   }
-   
-   .card__face--back {
-     background: #14455e;
-     transform: rotateY(180deg);
-   }
-   
-   
-   .card__face {
-     display: flex;
-     align-self: center;
-     align-items: center;
-     justify-content: center;
-   }
-   
-   @media (max-width: 768px) {
-     .jatek {
-       margin: .05rem;
-     }
-     .card {
-       flex: 0 1 15%;
-       height: 24vh;
-       line-height: 1.3rem;
-     }
-   }
-   
-   
-  
-  
-  
-   /* FOOTER */
-   .footer {
-     background: #314a55;
-     font-family: 'Josefin Sans', sans-serif;
-     color: #edeee3;
-     font-size: .85rem;
-     line-height: 1.1rem;
-   }
-   
-   .strong {
-     font-weight: 700;
-     color: #eeefe5;
-     font-size: .95rem;
-   }
-   
-   .strong:hover {
-     color: #afccd3;
-     transition: color .4s ease-in-out;
-   }
-   
-   
-   @media (max-width: 768px) {
-    .footer {
-       min-height: 3rem;
-       text-align: center;
-       font-size: .8rem;
-       line-height: 1.15rem;
-     }
-     
-     .strong {
-     font-weight: 700;
-     color: #eeefe5;
-     font-size: .8rem;
-   }
-   }
+
+}
+
+
+
+@media (max-width: 1280px) {  
+
+
+
+.menu {
+  width: 90%;
+}
+
+.btn {
+  width: 30rem;
+  height: 3rem;
+  text-align: center;
+  font-size: max(.9rem,.85vw);
+  display: flex;
+  align-content: center;
+}
+}
+
+@media (max-width: 414px) {
+.menu {
+  width: 90%;
+}
+
+.btn {
+  width: 16rem;
+  height: 3rem;
+  text-align: center;
+  font-size: max(1rem,1vw);
+  display: flex;
+  align-content: center;
+}
+}
+
+@media (max-width: 900px) {
+.btn {
+  font-size: mx(1.5rem,10vw);
+}
+}
