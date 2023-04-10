@@ -210,11 +210,37 @@
 
 /* MODIFIERS */
 @media (max-width: 768px) {  
+body {
+  margin: auto;
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+}
+
+.container:before {
+  filter:           blur(.1rem);
+  content:          "";
+  position:         fixed;
+  top:              0;
+  left:             0;
+  right:            0;
+  bottom:           0;
+  z-index:          -1;
+  background-image: url(https://i.imgur.com/X9eWtyr.jpg);
+  background-size:  cover;
+  opacity:          0.3;
+}
 
 
 .header {
       background: url('https://i.imgur.com/MBBRjHc.jpg') no-repeat center;
       background-size: cover;
+  background-attachment: fixed;
+  display:     grid;
+  text-align:  center;
+  padding-bottom: 20rem;
     }
 
 .header-text {
@@ -223,17 +249,76 @@
   }
 
 
+
 .menu {
   display: grid;
   flex-direction: row;
   width: 20%;
   padding-bottom: 3rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .btn {
   width: .5vw;
 }
 
+.program {
+   margin: .25rem;
+}
+
+  
+ .section-left::after, .section-right::after {
+    display: none;
+        width: 85%;
+  }
+
+
+.program, .section-left, .section-right, .program-text-left  {
+  width: 95%;
+  margin: 1.5rem auto;
+  text-align: center;
+  display: inline-block;
+
+}
+
+.program-text-left, .program-text-right {
+    margin-top: -.5rem;
+  width: 100%;
+}
+
+.program-image-right, .program-image-left {
+display: inline-block;
+margin: auto;
+margin-top: -2rem;
+}
+
+#program-text-transzfer {
+  margin-top: -2rem;
+}
+
+.program-text-left, .program-text-right, .program-image-left, .program-image-right {
+  padding: .5rem;
+}
+
+.program-image-left, .program-image-right {
+width: 12rem;
+height: 12rem;
+}
+
+#sztori {
+  padding-top: 3rem;
+}
+
+.felso {
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.also {
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+}
 
 .jatek {
      margin: .05rem;
@@ -251,7 +336,9 @@
 
 @media (max-width: 1280px) {  
 
-
+.header {
+  background-attachment: fixed;
+}
 
 .menu {
   width: 90%;
@@ -268,6 +355,10 @@
 }
 
 @media (max-width: 414px) {
+.header {
+  background-attachment: fixed;
+}
+
 .menu {
   width: 90%;
 }
@@ -283,6 +374,10 @@
 }
 
 @media (max-width: 900px) {
+.header {
+  background-attachment: fixed;
+}
+
 .btn {
   font-size: mx(1.5rem,10vw);
 }
