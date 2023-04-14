@@ -1,6 +1,10 @@
 /* MODIFIERS */
 
 @media (max-width: 1280px) {  
+    body {
+        margin: auto;
+    }
+    
     .menu {
       width: 90%;
     }
@@ -465,9 +469,9 @@
     }
     
     .card {
-         height: 20vh;
+         height: 28vh;
          width: 24.5vw;
-         line-height: 1.5em;
+         line-height: 1.4em;
          font-size: .93em;
        }
     
@@ -500,8 +504,9 @@
     }
     
     .card {
-      font-size: .9em;
-      line-height: 1.35em;
+      font-size: .85em;
+      line-height: 1.3em;
+      height: 13em;
     }
     
     .footer  {
@@ -541,10 +546,10 @@
     }
     
     .card {
-         height: 20vh;
+         height: 21vh;
          width: 24.5vw;
-         line-height: 1.35em;
-         font-size: .7em;
+         line-height: 1.3em;
+         font-size: .6em;
        }
     
     .footer {
