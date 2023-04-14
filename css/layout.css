@@ -54,6 +54,11 @@
     height: min(140rem,25vh);
   }
   
+  @media (max-width: 768px) {
+    .program {
+      margin: .05rem;
+    }
+  }
 
 
  /* SZTORI */
